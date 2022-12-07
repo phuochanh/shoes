@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 
 export default class Product extends Component {
   render() {
-
     return (
         <div className="card mt-4">
         <img className="card-img-top" src={this.props.element.image} alt="#" />
