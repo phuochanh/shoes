@@ -1,15 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class ChiTietSanPham extends Component {
   render() {
     return (
-        <div className="row mt-5 mr-2 text-left">
+      <div id="a" className="row mt-5 mr-2 text-left">
         <div className="col-4 text-center">
-          
-          <img
-            className="img-fluid"
-            src={this.props.shoeDetail.image}
-          />
+          <img className="img-fluid" src={this.props.shoeDetail.image} />
           <h2>{this.props.shoeDetail.name}</h2>
         </div>
         <div className="col-8">
@@ -26,7 +22,7 @@ export default class ChiTietSanPham extends Component {
               </tr>
               <tr>
                 <td>Giá</td>
-                <td>{this.props.shoeDetail.price}</td>
+                <td>{this.props.shoeDetail.price} $</td>
               </tr>
               <tr>
                 <td>Mô tả</td>
@@ -44,6 +40,6 @@ export default class ChiTietSanPham extends Component {
           </table>
         </div>
       </div>
-    )
+    );
   }
 }

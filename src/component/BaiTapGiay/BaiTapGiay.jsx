@@ -8,10 +8,6 @@ export default class BaiTapGiay extends Component {
   state = {
     shoeDetail: data[0],
   };
-
-  showDescription = (description) => {
-    alert(description);
-  };
   renderShoes = () => {
     return data.map((element) => {
       return (
@@ -23,7 +19,6 @@ export default class BaiTapGiay extends Component {
   };
 
   getShoeDetail = (shoe) => {
-    // console.log(shoe);
     this.setState({
       shoeDetail: shoe,
     });
@@ -34,10 +29,15 @@ export default class BaiTapGiay extends Component {
       <div>
         <div className="row">
           <div className="col-3 mt-5">
-            <p>Home</p>
-            <p>Shop</p>
+            <a style={{ color: "black" }} href="#shop">
+              Home
+            </a>
+            <br />
+            <a style={{ color: "black" }} href="#shop">
+              Shop
+            </a>
           </div>
-          <div className="col-9">
+          <div id="shop" className="col-9">
             <h3 className="mt-3">Shoes shop</h3>
             <div className="row mr-2">{this.renderShoes()}</div>
             <ChiTietSanPham shoeDetail={this.state.shoeDetail} />
