@@ -9,6 +9,7 @@ export default class Product extends Component {
           <h5 className="card-title">{this.props.element.name}</h5>
           <p className="card-price"><strong style={{color: 'red'}}>{this.props.element.price} $</strong> </p>
           <button onClick={() => this.props.getShoeDetail(this.props.element)} className='btn btn-primary'> <a style={{color: 'white'}} href="#a">Xem chi tiết</a> </button>
+          <button onClick={()=> this.props.addToCart(this.props.element)} className="btn btn-success">Add to Carts</button>
         </div>
       </div>
     )
